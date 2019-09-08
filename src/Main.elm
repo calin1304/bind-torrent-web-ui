@@ -43,7 +43,7 @@ type Msg = Tick Time.Posix
          | TorrentCanceled (Result Http.Error ())
          | ToggleSideBar
 
-main = Browser.element { init = testInit
+main = Browser.element { init = init
                        , view = view
                        , update = update
                        , subscriptions = subscriptions 
