@@ -1,0 +1,174 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    min-height: 100%;
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+}
+
+#left-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#right-container {
+    display: flex;
+    transition: all 1.5s;
+}
+
+#toolbar {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #182233;
+}
+
+#titleBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#titleBar > .btn {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#toolbar-logo {
+    background-color: #182233;
+    color: #f0f0f0;
+    padding: 4px 16px;
+    flex: 0 1 40px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#toolbar-logo > h3 {
+    display: inline;
+}
+
+#toolbar-buttons {
+    display: flex;
+}
+
+#toolbar-buttons > .btn {
+    width: 100px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    padding: 8px 2px;
+    margin: 4px 8px;
+    color: #fff;
+    transition: all .2s ease;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 2px solid #bdbdbd;
+}
+
+#toolbar-buttons > .btn:hover {
+    background-color: #777;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+#toolbar-buttons > .btn:last-child {
+    margin-left: auto;
+}
+
+#content {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    height: 100%;
+    position: relative;
+}
+
+footer {
+    color: #f0f0f0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 32px;
+    background-color: #182233;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+footer > #icons > #icon {
+    margin: 0px 6px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:link {
+    color: #f0f0f0;
+}
+
+footer a:visited {
+    color: #f0f0f0;
+}
+
+#torrentList {
+    flex: 1;
+    background-color: #fff;
+}
+
+#torrentStatus {
+    padding: 4px 16px;
+    background-color: #fafafa;
+    border-left: 1px solid #e1e1e1;
+    transition: transform 1s ease;
+}
+
+.torrentListEntry {
+    text-align: center;
+    padding: 16px;
+    margin: auto;
+    width: 85%;
+}
+
+.torrentTitle {
+    margin: 0;
+}
+
+.torrentSubtitle {
+    color: #888;
+    margin: 0;
+}
+
+.statusValueKey {
+    font-weight: bold;
+}
+
+.statusValueField {
+    margin-left: 12px;
+}
+
+progress {
+    height: 8px;
+    width: 70%;
+}
+
+progress::-moz-progress-bar { background: #008100; }
+progress::-webkit-progress-value { background: #008100; }
+progress { color: #008100; }
+
+hr {
+    color: #e1e1e1;
+}
