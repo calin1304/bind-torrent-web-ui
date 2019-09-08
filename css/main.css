@@ -22,7 +22,10 @@ body {
 
 #right-container {
     display: flex;
-    transition: all 1.5s;
+}
+
+#right-container.collapsed {
+    display: none;
 }
 
 #toolbar {

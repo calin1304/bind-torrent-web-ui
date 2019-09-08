@@ -140,21 +140,10 @@ view model =
     let rightContainer = 
             Html.div ([ HtmlAttr.id "right-container"] ++ rightContainerStyle)
                 [ viewTorrentDetails model ]
-        rightContainerStyle = 
-            let hiddenStyle = 
-                    [ HtmlAttr.style "max-width" "0"
-                    , HtmlAttr.style "opacity" "0"
-                    ]
-                defaultStyle =
-                    [ HtmlAttr.style "max-width" "1000px"
-                    , HtmlAttr.style "opacity" "1"
-                    ]
-             in if not model.showSideBar then hiddenStyle else defaultStyle
+        rightContainerStyle = if not model.showSideBar then [ HtmlAttr.class "collapsed" ] else []
      in Html.div [ HtmlAttr.id "container" ]
             [ Html.div [ HtmlAttr.id "left-container" ]
-                [ -- viewTitleBar 
-                viewToolbar 
-                -- , viewContent model
+                [ viewToolbar 
                 , viewTorrentList model
                 , viewFooter model
                 ]
@@ -191,9 +180,7 @@ viewToolbar =
 
 viewContent model =
     Html.div [ HtmlAttr.id "content" ]
-        [ viewTorrentList model
-        -- , viewTorrentDetails model
-        ]
+        [ viewTorrentList model ]
 
 viewFooter model = 
     let icon name url = 
@@ -266,8 +253,6 @@ statusField k v =
         [ Html.p [ HtmlAttr.class "statusValueKey" ] [ Html.text (String.append k ": ")]
         , Html.p [ HtmlAttr.class "statusValueField" ] [ Html.text v ]
         ]
-
-        
 
 button attrs = Html.div (List.append attrs [ HtmlAttr.class "btn" ])
 
